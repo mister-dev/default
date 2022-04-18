@@ -1,60 +1,162 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+
+    quotes = [
+        ['The secret of getting ahead is getting started.','Mark Twain'],
+        ['It’s hard to beat a person who never gives up.','Babe Ruth'],
+        ['Everything you can imagine is real.','Pablo Picasso'],
+        ['Do one thing every day that scares you.','Eleanor Roosevelt'],
+        ['Simplicity is the ultimate sophistication.','Leonardo da Vinci'],
+        ['Well begun is half done.','Aristotle'],
+        ['It always seems impossible until it is done.','Nelson Mandela'],
+        ['Happiness is not something ready made. It comes from your own actions.','Dalai Lama'],
+        ['Whatever you are, be a good one.','Abraham Lincoln'],
+        ['Impossible is just an opinion.','Paulo Coelho'],
+        ['Your passion is waiting for your courage to catch up.','Isabelle Lafleche'],
+        ['If opportunity doesn\'t knock, build a door.','Kurt Cobain'],
+        ['Work hard in silence, let your success be the noise.','Frank Ocean'],
+        ['Work hard, be kind, and amazing things will happen.','Conan O’Brien'],
+        ['In the middle of every difficulty lies opportunity.','Albert Einstein']
+    ];
+  
+    maxQuotes = quotes.length;
+
+    function getRandomSentence() {
+        var index = Math.floor(Math.random() * (maxQuotes - 1));
+        return quotes[index];
+    }
+
+    randquote = getRandomSentence();
+  
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>COMING SOON...</title>
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon...</title>
     <style>
-        html,
-        body {
-            background-color: #ffffff;
-            color: #000000;
-            font-family: "Rubik", sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
+        html {
+            font-family: Arial, sans-serif;
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
         }
-        a,
-        a:hover,
-        a:visited {
-            color: #000000
+        main {
+            margin: 5rem 0 0 5rem;
         }
-        .full-height {
-            height: 100vh;
+        h1,
+        p {
+            margin-top: 0;
+            margin-bottom: 2rem;
         }
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
+        h1 {
+            font-weight: 700;
+            font-size: 4.5rem;
         }
-        .position-ref {
-            position: relative;
+        p {
+            color: #7d7d7d;
+            font-size: 1.75rem;
         }
-        .content {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .title {
-            font-size: 32px;
-        }
-        .m-b-md {
-            margin-bottom: 30px;
+        @media screen and (max-width: 768px) {
+            html {
+                font-size: 12px;
+            }
+
+            main {
+                margin: 3rem 0 0 3rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="flex-center position-ref full-height">
-        <div class="content">
-            <div class="title m-b-md"> COMING SOON... </div>
-        </div>
-    </div>
+    <main>
+        <h1><script>document.write(randquote[0]);</script></h1>
+        <p><script>document.write(randquote[1]);</script></p>
+    </main>
 </body>
 
 </html>
+
+
+<!-- PHP VERSION 
+
+
+<?php
+
+  $quotes = [
+      ['quote' => 'The secret of getting ahead is getting started.', 'author' => 'Mark Twain'],
+      ['quote' => 'It’s hard to beat a person who never gives up.', 'author' => 'Babe Ruth'],
+      ['quote' => 'Everything you can imagine is real.', 'author' => 'Pablo Picasso'],
+      ['quote' => 'Do one thing every day that scares you.', 'author' => 'Eleanor Roosevelt'],
+      ['quote' => 'Simplicity is the ultimate sophistication.', 'author' => 'Leonardo da Vinci'],
+      ['quote' => 'Well begun is half done.', 'author' => 'Aristotle'],
+      ['quote' => 'It always seems impossible until it is done.', 'author' => 'Nelson Mandela'],
+      ['quote' => 'Happiness is not something ready made. It comes from your own actions.', 'author' => 'Dalai Lama'],
+      ['quote' => 'Whatever you are, be a good one.', 'author' => 'Abraham Lincoln'],
+      ['quote' => 'Impossible is just an opinion.', 'author' => 'Paulo Coelho'],
+      ['quote' => 'Your passion is waiting for your courage to catch up.', 'author' => 'Isabelle Lafleche'],
+      ['quote' => 'If opportunity doesn\'t knock, build a door.', 'author' => 'Kurt Cobain'],
+      ['quote' => 'Work hard in silence, let your success be the noise.', 'author' => 'Frank Ocean'],
+      ['quote' => 'Work hard, be kind, and amazing things will happen.', 'author' => 'Conan O’Brien'],
+      ['quote' => 'In the middle of every difficulty lies opportunity.', 'author' => 'Albert Einstein']
+  ];
+  
+  $randquote = array_rand($quotes);
+  
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon...</title>
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        main {
+            margin: 5rem 0 0 5rem;
+        }
+        h1,
+        p {
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 4.5rem;
+        }
+        p {
+            color: #7d7d7d;
+            font-size: 1.75rem;
+        }
+        @media screen and (max-width: 768px) {
+            html {
+                font-size: 12px;
+            }
+
+            main {
+                margin: 3rem 0 0 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1><?php echo $quotes[$randquote]['quote']; ?></h1>
+        <p><?php echo $quotes[$randquote]['author']; ?></p>
+    </main>
+</body>
+
+</html>
+
+-->
